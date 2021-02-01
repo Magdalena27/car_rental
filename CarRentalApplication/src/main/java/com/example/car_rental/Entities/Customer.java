@@ -18,6 +18,8 @@ public class Customer {
     private Integer age;
     private String login;
     private String password;
+    private Integer enabled;
+    private String role;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "customer")
@@ -33,6 +35,14 @@ public class Customer {
 
     public String getName() {
         return name;
+    }
+
+    public Integer getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Integer enabled) {
+        this.enabled = enabled;
     }
 
     public void setName(String name) {
@@ -95,6 +105,14 @@ public class Customer {
         this.rentals = rentals;
     }
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -106,6 +124,8 @@ public class Customer {
                 ", age=" + age +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                ", role='" + role + '\'' +
                 ", rentals=" + rentals +
                 '}';
     }

@@ -1,6 +1,7 @@
-package com.example.car_rental;
+package com.example.car_rental.Controllers;
 
 import com.example.car_rental.Entities.Customer;
+import com.example.car_rental.Managers.CustomerManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,4 +39,8 @@ public class CustomerApi {
         customerManager.deleteById(id);
     }
 
+//    @GetMapping("/test")
+//    public Optional<String> getPass(@RequestParam Long id){
+//        return customerManager.findPasswordById(id);
+//    }
 }

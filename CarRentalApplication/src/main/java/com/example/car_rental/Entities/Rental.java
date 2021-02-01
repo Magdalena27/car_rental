@@ -23,6 +23,10 @@ public class Rental {
     @JoinColumn(name="customerID")
     private Customer customer;
 
+    @OneToOne
+    @JoinColumn(name="carID")
+    private Car car;
+
     public Long getRentalID() {
         return rentalID;
     }
@@ -79,6 +83,13 @@ public class Rental {
         this.customer = customer;
     }
 
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
 
     @Override
     public String toString() {
@@ -88,6 +99,7 @@ public class Rental {
                 ", returnDate=" + returnDate +
                 ", returnExtension=" + returnExtension +
                 ", customer=" + customer +
+                ", car=" + car +
                 '}';
     }
 }
