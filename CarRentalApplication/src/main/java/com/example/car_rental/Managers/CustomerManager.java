@@ -55,20 +55,19 @@ public class CustomerManager {
         return new BCryptPasswordEncoder();
     }
 
-
-//    @PostConstruct
-//    public void CustomerManager() {
-//        Customer customer = new Customer();
-//        customer.setName("Zbigniew");
-//        customer.setSurname("Porzycz");
-//        customer.setAge(50);
-//        customer.setEmail("zbigniewporzycz@mojapoczta.pl");
-//        customer.setPhoneNumber(666666666);
-//        customer.setLogin("admin");
-//        customer.setPassword(passwordEncoder().encode("admin"));
-//        customer.setEnabled(1);
-//        customer.setRole("ADMIN");
-//        customerRepository.save(customer);
+@PostConstruct
+    public void CustomerManager() {
+        Customer customer = new Customer();
+        customer.setName("Zbigniew");
+        customer.setSurname("Porzycz");
+        customer.setAge(50);
+        customer.setEmail("zbigniewporzycz@mojapoczta.pl");
+        customer.setPhoneNumber(666666666);
+        customer.setLogin("admin");
+        customer.setPassword(passwordEncoder().encode("admin"));
+        customer.setEnabled(1);
+        customer.setRole("ROLE_ADMIN");
+        customerRepository.save(customer);
 
 //        Rental rental = new Rental();
 //        rental.setCustomer(customer);
@@ -76,17 +75,17 @@ public class CustomerManager {
 //        rental.setReturnDate(LocalDate.of(2021, 2, 1));
 //        rentalRepository.save(rental);
 
-//        Customer customer2 = new Customer();
-//        customer2.setName("Anna");
-//        customer2.setSurname("Nowak");
-//        customer2.setAge(30);
-//        customer2.setEmail("annanowak@mojapoczta.pl");
-//        customer2.setPhoneNumber(603603603);
-//        customer2.setLogin("anna");
-//        customer2.setPassword(passwordEncoder().encode("annanowak"));
-//        customer2.setEnabled(1);
-//        customer2.setRole("USER");
-//        customerRepository.save(customer2);
+        Customer customer2 = new Customer();
+        customer2.setName("Anna");
+        customer2.setSurname("Nowak");
+        customer2.setAge(30);
+        customer2.setEmail("annanowak@mojapoczta.pl");
+        customer2.setPhoneNumber(603603603);
+        customer2.setLogin("anna");
+        customer2.setPassword(passwordEncoder().encode("annanowak"));
+        customer2.setEnabled(1);
+        customer2.setRole("ROLE_USER");
+        customerRepository.save(customer2);
 
 //        Rental rental2 = new Rental();
 //        rental2.setCustomer(customer2);
@@ -101,6 +100,6 @@ public class CustomerManager {
 //            System.out.println(cust);
 //        }
 //
- //   }
+}
 
 }

@@ -57,17 +57,17 @@ public class CarManager {
         return carRepository.findCarsMoreExpensiveThan(rentalPrice);
     }
 
-//    @PostConstruct
-//    public void CarManager() {
-//        Car car = new Car();
-//        car.setBrand("BMW");
-//        car.setColor("white");
-//        car.setModel("X6");
-//        car.setEngineCapacity(2000);
-//        car.setEngineType("diesel");
-//        car.setProductionYear(2020);
-//        car.setRentPrice(600.03f);
-//        car.setStatus(StatusOfCar.carStatus.AVAILABLE);
-//        carRepository.save(car);
-//    }
+    @PostConstruct
+    public void CarManager() {
+    Car car = new Car();
+    car.setBrand("BMW");
+    car.setColor("white");
+    car.setModel("X6");
+    car.setEngineCapacity(2000);
+    car.setEngineType("diesel");
+    car.setProductionYear(2020);
+    car.setRentPrice(600.03f);
+    car.setStatus(StatusOfCar.carStatus.AVAILABLE);
+    carRepository.save(car);
+    }
 }
