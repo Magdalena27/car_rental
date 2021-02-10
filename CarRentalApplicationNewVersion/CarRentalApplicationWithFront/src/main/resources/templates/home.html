@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car rental - strona główna</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/carrental.css" th:href="@{/css/carrental.css}"/>
+
+
+</head>
+<body>
+<div class="toolbar-container">
+    <nav id="main-toolbar">
+        <div class="toolbar">
+            <ul class="toolbar-links">
+                <li><a th:href="@{home}" class="toolbar-link">Strona główna</a></li>
+                <li><a th:href="@{cars}" class="toolbar-link">Nasze samochody</a></li>
+                <li><a th:href="@{about}" class="toolbar-link">O nas</a></li>
+                <li><a th:href="@{contact}" class="toolbar-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<img th:src="@{/images/car-logo2.png}" id="baner-pic"/>
+
+<h1>Witaj w naszej wypożyczalni samochodów!</h1>
+</body>
+</html>
