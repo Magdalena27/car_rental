@@ -12,8 +12,6 @@ public class Rental {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long rentalID;
-    //    private Long carID;
-//    private Long customerID;
     private LocalDate rentalDate;
     private LocalDate returnDate;
     private LocalDate returnExtension;

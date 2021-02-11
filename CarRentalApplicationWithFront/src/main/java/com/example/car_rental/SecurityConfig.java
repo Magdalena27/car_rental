@@ -34,15 +34,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable();
         http.httpBasic().and().authorizeRequests()
                ///.anyRequest().authenticated()
-                .antMatchers(HttpMethod.POST, "/api/cars/save").hasRole("ADMIN") // dziala
-                .antMatchers(HttpMethod.GET, "/api/customers/all").hasRole("ADMIN") // dziala
-                .antMatchers(HttpMethod.DELETE, "/api/customers/del").hasRole("ADMIN") // dziala
-                .antMatchers(HttpMethod.GET, "/api/rentals/all").hasRole("ADMIN") // dziala
-                .antMatchers(HttpMethod.DELETE, "/api/rentals/del").hasRole("ADMIN") // nie moge sprawdzic
-                .antMatchers(HttpMethod.DELETE, "/api/cars/del").hasRole("ADMIN") // dziala
-                .antMatchers(HttpMethod.POST, "/api/rentals/save").hasAnyRole("USER", "ADMIN") // nie moge sprawdzic
-                .antMatchers(HttpMethod.POST, "/api/customers/save").hasAnyRole("USER", "ADMIN") // dziala
-                .antMatchers(HttpMethod.GET, "/api/cars/all").hasAnyRole("USER", "ADMIN") // dziala
+                .antMatchers(HttpMethod.POST, "/api/cars/save").hasRole("ADMIN")                            // dziala
+                .antMatchers(HttpMethod.GET, "/api/customers/all").hasRole("ADMIN")                         // dziala
+                .antMatchers(HttpMethod.DELETE, "/api/customers/del").hasRole("ADMIN")                      // dziala
+                .antMatchers(HttpMethod.GET, "/api/rentals/all").hasRole("ADMIN")                           // dziala
+                .antMatchers(HttpMethod.DELETE, "/api/rentals/del").hasRole("ADMIN")                        // nie moge sprawdzic
+                .antMatchers(HttpMethod.DELETE, "/api/cars/del").hasRole("ADMIN")                           // dziala
+                .antMatchers(HttpMethod.POST, "/api/rentals/save").hasAnyRole("USER", "ADMIN")       // nie moge sprawdzic
+                .antMatchers(HttpMethod.POST, "/api/customers/save").hasAnyRole("USER", "ADMIN")     // dziala
+                .antMatchers(HttpMethod.GET, "/api/cars/all").permitAll()                                   // zmiana
                 .and()
                 .formLogin().permitAll()
                 .and()

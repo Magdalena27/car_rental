@@ -2,15 +2,22 @@
 <html lang="pl-PL" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <title>O nas</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/carrental.css" th:href="@{/css/carrental.css}"/>
 </head>
 <body>
-<h1>Kilka słów o nas!</h1>
-<div align="center">
-    <a th:href="@{home}">Home</a>
-    <a th:href="@{cars}">Cars</a>
-    <a th:href="@{about}">About us</a>
-    <a th:href="@{contact}">Contact</a>
+<div class="toolbar-container">
+    <nav id="main-toolbar">
+        <div class="toolbar">
+            <ul class="toolbar-links">
+                <li><a th:href="@{home}" class="toolbar-link">Strona główna</a></li>
+                <li><a th:href="@{cars}" class="toolbar-link">Nasze samochody</a></li>
+                <li><a th:href="@{about}" class="toolbar-link">O nas</a></li>
+                <li><a th:href="@{contact}" class="toolbar-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
+<h1>Kilka słów o nas!</h1>
 </body>
 </html>

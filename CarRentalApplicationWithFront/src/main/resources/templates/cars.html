@@ -2,15 +2,48 @@
 <html lang="pl-PL" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Cars</title>
+    <title>Samochody</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/carrental.css" th:href="@{/css/carrental.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 </head>
 <body>
+<div class="toolbar-container">
+    <nav id="main-toolbar">
+        <div class="toolbar">
+            <ul class="toolbar-links">
+                <li class="donttouchit"><a th:href="@{home}" class="toolbar-link">Strona główna</a></li>
+                <li class="donttouchit"><a th:href="@{cars}" class="toolbar-link">Nasze samochody</a></li>
+                <li class="donttouchit"><a th:href="@{about}" class="toolbar-link">O nas</a></li>
+                <li class="donttouchit"><a th:href="@{contact}" class="toolbar-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
 <h1>Oferta aut</h1>
-<div align="center">
-    <a th:href="@{home}">Home</a>
-    <a th:href="@{cars}">Cars</a>
-    <a th:href="@{about}">About us</a>
-    <a th:href="@{contact}">Contact</a>
+<div class="row col-md-7 table-responsive">
+    <table id="cars" class="table">
+        <thead>
+        <tr>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Pojemność silnika</th>
+            <th>Kolor</th>
+            <th>Rok produkcji</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car, rowStat: ${cars}"
+            th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
+            <td th:text="${car.brand}">Marka</td>
+            <td th:text="${car.model}">Model</td>
+            <td th:text="${car.engineCapacity}">Pojemność silnika</td>
+            <td th:text="${car.color}">Kolor</td>
+            <td th:text="${car.productionYear}">Rok produkcji</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </div>
 </body>
 </html>

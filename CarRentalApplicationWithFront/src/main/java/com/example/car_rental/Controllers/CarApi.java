@@ -4,6 +4,7 @@ import com.example.car_rental.Entities.Car;
 import com.example.car_rental.Entities.StatusOfCar;
 import com.example.car_rental.Managers.CarManager;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -20,7 +21,6 @@ public class CarApi {
         this.carManager = carManager;
     }
 
-    @GetMapping("/all")
     public Iterable<Car> getAll(){
         return carManager.findAll();
     }

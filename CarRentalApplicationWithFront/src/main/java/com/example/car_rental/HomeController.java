@@ -18,8 +18,7 @@ public class HomeController {
      public String about(){
         return "about";
     }
-     @GetMapping("/cars")
-     public String cars(){
-        return "cars";
-    }
+//     @GetMapping("/cars")
+//     public String cars(){ return "cars";
+//    }
 }
