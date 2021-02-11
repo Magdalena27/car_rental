@@ -44,9 +44,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/customers/save").hasAnyRole("USER", "ADMIN")     // dziala
                 .antMatchers(HttpMethod.GET, "/api/cars/all").permitAll()                                   // zmiana
                 .and()
-                .formLogin().permitAll()
-                .and()
-                .logout().permitAll();
+                .formLogin()
+                .loginPage("/login")
+                .permitAll();
     }
 
 }

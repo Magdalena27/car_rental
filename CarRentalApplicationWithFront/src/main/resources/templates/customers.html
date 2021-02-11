@@ -2,7 +2,7 @@
 <html lang="pl-PL" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Samochody</title>
+    <title>Klienci</title>
     <link rel="stylesheet" type="text/css" media="all" href="../static/css/carrental.css" th:href="@{/css/carrental.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 </head>
@@ -21,29 +21,31 @@
     </nav>
 </div>
 <div class="container">
-<h1>Oferta aut</h1>
-<div class="row col-md-7 table-responsive">
-    <table id="cars" class="table">
-        <thead>
-        <tr>
-            <th>Marka</th>
-            <th>Model</th>
-            <th>Pojemność silnika</th>
-            <th>Kolor</th>
-            <th>Rok produkcji</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="car, rowStat: ${cars}"
-            th:style="${rowStat.odd} ? 'color: gray' : 'color: DarkViolet;'">
-            <td th:text="${car.brand}">Marka</td>
-            <td th:text="${car.model}">Model</td>
-            <td th:text="${car.engineCapacity}">Pojemność silnika</td>
-            <td th:text="${car.color}">Kolor</td>
-            <td th:text="${car.productionYear}">Rok produkcji</td>
-        </tr>
-        </tbody>
-    </table>
+    <h1>Baza klientów - dostęp dla admina</h1>
+    <div class="row col-md-7 table-responsive">
+        <table id="customers" class="table">
+            <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>E-mail</th>
+                <th>Telefon</th>
+                <th>Wiek</th>
+                <th>Login</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="customer, rowStat: ${customers}"
+                th:style="${rowStat.odd} ? 'color: gray' : 'color: DarkViolet;'">
+                <td th:text="${customer.name}">Imię</td>
+                <td th:text="${customer.surname}">Nazwisko</td>
+                <td th:text="${customer.email}">E-mail</td>
+                <td th:text="${customer.phoneNumber}">Telefon</td>
+                <td th:text="${customer.age}">Wiek</td>
+                <td th:text="${customer.login}">Login</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 </div>

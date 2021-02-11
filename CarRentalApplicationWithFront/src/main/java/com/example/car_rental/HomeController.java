@@ -14,10 +14,16 @@ public class HomeController {
     public String contact(){
         return "contact";
     }
-     @GetMapping("/about")
-     public String about(){
+    @GetMapping("/about")
+    public String about(){
         return "about";
     }
+    @GetMapping("/login")
+    public String login() { return "login";
+    }
+    //@GetMapping("/customers")
+    //public String customers() { return "customers";
+    //}
 //     @GetMapping("/cars")
 //     public String cars(){ return "cars";
 //    }
