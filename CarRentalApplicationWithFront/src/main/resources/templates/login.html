@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl-PL" xmlns:th="https://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moduł logowania</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../static/css/carrental.css" th:href="@{/css/carrental.css}"/>
+</head>
+<body>
+<div class="toolbar-container">
+    <nav id="main-toolbar">
+        <div class="toolbar">
+            <ul class="toolbar-links">
+                <li><a th:href="@{home}" class="toolbar-link">Strona główna</a></li>
+                <li><a th:href="@{about}" class="toolbar-link">O nas</a></li>
+                <li><a th:href="@{contact}" class="toolbar-link">Kontakt</a></li>
+                <li><a th:href="@{cars}" class="toolbar-link">Nasze samochody</a></li>
+                <li><a th:href="@{login}" class="toolbar-link">Logowanie</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<h1>Moduł logowania</h1>
+<div>
+    <form name="f" th:action="@{/login}" method="post">
+        <fieldset>
+            <div th:if="${param.error}" class="alert alert-error">
+                Nieprawidlowy login i haslo.
+            </div>
+            <div th:if="${param.logout}" class="alert alert-success">
+                Zostales zalogowany.
+            </div>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login"/>
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password"/>
+            <div class="form-actions">
+                <button type="submit" class="btn">Zaloguj</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

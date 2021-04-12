@@ -57,7 +57,7 @@ public class CarManager {
         return carRepository.findCarsMoreExpensiveThan(rentalPrice);
     }
 
-    @PostConstruct
+    /*PostConstruct
     public void CarManager() {
     Car car = new Car();
     car.setBrand("BMW");
@@ -69,5 +69,52 @@ public class CarManager {
     car.setRentPrice(600.03f);
     car.setStatus(StatusOfCar.carStatus.AVAILABLE);
     carRepository.save(car);
-    }
+
+    Car car2 = new Car();
+    car2.setBrand("Lexus");
+    car2.setColor("white");
+    car2.setModel("RX");
+    car2.setEngineCapacity(3500);
+    car2.setEngineType("hybrid");
+    car2.setProductionYear(2020);
+    car2.setRentPrice(670.02f);
+    car2.setStatus(StatusOfCar.carStatus.AVAILABLE);
+    carRepository.save(car2);
+
+    Car car3 = new Car();
+    car3.setBrand("BMW");
+    car3.setColor("gray");
+    car3.setModel("X3");
+    car3.setEngineCapacity(2500);
+    car3.setEngineType("diesel");
+    car3.setProductionYear(2017);
+    car3.setRentPrice(470.03f);
+    car3.setStatus(StatusOfCar.carStatus.AVAILABLE);
+    carRepository.save(car3);
+
+    Car car4 = new Car();
+    car4.setBrand("Mercedes");
+    car4.setColor("black");
+    car4.setModel("S63");
+    car4.setEngineCapacity(5500);
+    car4.setEngineType("petrol");
+    car4.setProductionYear(2019);
+    car4.setRentPrice(580.33f);
+    car4.setStatus(StatusOfCar.carStatus.AVAILABLE);
+    carRepository.save(car4);
+
+    Car car5 = new Car();
+    car5.setBrand("Porshe");
+    car5.setColor("red");
+    car5.setModel("Panamera");
+    car5.setEngineCapacity(4000);
+    car5.setEngineType("diesel");
+    car5.setProductionYear(2017);
+    car5.setRentPrice(770.55f);
+    car5.setStatus(StatusOfCar.carStatus.AVAILABLE);
+    carRepository.save(car5);*/
+
+    //}
+
+
 }
